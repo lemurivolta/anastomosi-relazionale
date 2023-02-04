@@ -22,3 +22,29 @@ testo di coagula
 === Node1_amalgama ===
 testo di amalgama
 -> DONE
+
+
+
+
+=== Node2 ===
+# suggestion: COCCINIGLIA STEREOTIPARIA
+# description: questo parassita trasmette un senso di inadeguatezza alle radici, che smettono di proliferare e crescere
+
+* [solve #solve]
+  -> Node2_solve
+* [coagula #coagula]
+  -> Node2_coagula
+* [amalgama #amalgama]
+  -> Node2_amalgama
+
+=== Node2_solve ===
+testo di solve
+-> DONE
+
+=== Node2_coagula ===
+testo di coagula
+-> DONE
+
+=== Node2_amalgama ===
+testo di amalgama
+-> DONE

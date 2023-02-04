@@ -15,7 +15,7 @@ public class SuggestionChoice : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     private void Start()
     {
-        _tmPro = GetComponent<TextMeshProUGUI>();
+        _tmPro = GetComponentInChildren<TextMeshProUGUI>();
         Assert.IsNotNull(_tmPro);
         _tmPro.color = _baseColor.Value;
     }
@@ -30,10 +30,5 @@ public class SuggestionChoice : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         Debug.Log("On pointer enter");
         _tmPro.color = _baseColor.Value;
-    }
-
-    private void OnMouseEnter()
-    {
-        Debug.Log("OnMouseEnter");
     }
 }

@@ -20,6 +20,7 @@ public class PlantSelectorSpriteMouseHover : MonoBehaviour
     [SerializeField] private StringEvent _nodeSelected;
 
     private bool _selected = false;
+    private bool _hovered = false;
 
     private void Start()
     {
@@ -34,27 +35,32 @@ public class PlantSelectorSpriteMouseHover : MonoBehaviour
 
     void OnMouseEnter()
     {
-        Debug.Log("OnMouseEnter");
-        _spriteRenderer.color = _hoverColor.Value;
+        _hovered = true;
+        UpdateColor();
         _nodeHovered.Raise(_nodeName);
     }
 
     void OnMouseExit()
     {
-        Debug.Log("OnMouseExit");
-        _spriteRenderer.color = GetCurrentColor();
+        _hovered = false;
+        UpdateColor();
         _nodeHovered.Raise("");
     }
 
     private void OnMouseDown()
     {
-        Debug.Log("OnMouseDown");
         _nodeSelected.Raise(_nodeName);
     }
 
     public void OnNodeSelected(string selectedNodeName)
     {
-        Debug.Log("OnNodeSelected");
         _selected = _nodeName == selectedNodeName;
+        UpdateColor();
+    }
+
+    private void UpdateColor()
+    {
+        _spriteRenderer.color = _selected ? _selectedColor.Value :
+            _hovered ? _hoverColor.Value : _baseColor.Value;
     }
 }
