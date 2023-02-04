@@ -50,8 +50,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dde7feec84ac9e48aa331f9658f83f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _storyNodes: {fileID: 11400000, guid: 4191b345c708266439cf1f2376c67525, type: 2}
   _baseColor: {fileID: 11400000, guid: 9a431f1dff4b8af4d9f3eda9aa410f47, type: 2}
   _hoverColor: {fileID: 11400000, guid: a9aaef673f39c0f479893646f29ed59b, type: 2}
+  _actionKind: 0
 --- !u!1 &2195812133423549500
 GameObject:
   m_ObjectHideFlags: 0
@@ -63,7 +65,6 @@ GameObject:
   - component: {fileID: 2195812133423549499}
   - component: {fileID: 2195812133423549497}
   - component: {fileID: 2195812133423549498}
-  - component: {fileID: 2195812133423549496}
   m_Layer: 5
   m_Name: ChoiceSolve
   m_TagString: Untagged
@@ -188,17 +189,3 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2195812133423549496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2195812133423549500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dde7feec84ac9e48aa331f9658f83f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _baseColor: {fileID: 11400000, guid: 9a431f1dff4b8af4d9f3eda9aa410f47, type: 2}
-  _hoverColor: {fileID: 11400000, guid: a9aaef673f39c0f479893646f29ed59b, type: 2}
