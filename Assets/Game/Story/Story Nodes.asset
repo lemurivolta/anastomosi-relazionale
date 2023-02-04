@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Story Nodes
   m_EditorClassIdentifier: 
   _inkTextAsset: {fileID: 4900000, guid: c5759db1facf2f445a523051cb08f674, type: 3}
+  _lineEvent: {fileID: 11400000, guid: 52c614fe8c096244ca7ca1b6c7b9b5b0, type: 2}
+  _choicesEvent: {fileID: 11400000, guid: f4f52168c376ef844b6504a5fe6aa77c, type: 2}
+  _advanceEvent: {fileID: 11400000, guid: 39238e11f04c97d42a4c8e21a35f3111, type: 2}
+  _makeChoiceEvent: {fileID: 11400000, guid: 091c256962e75034bb28c8f3d437917b, type: 2}
+  _nodeStartedEvent: {fileID: 11400000, guid: 031f2c9815a3c3648ad8a668f1e55249, type: 2}

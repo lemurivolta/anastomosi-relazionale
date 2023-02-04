@@ -2,6 +2,8 @@ using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityAtoms;
+using UnityAtoms.BaseAtoms;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Anastomosi/Create Story")]
@@ -17,22 +19,84 @@ public class StoryNodes : ScriptableObject
 
     [SerializeField] private TextAsset _inkTextAsset;
 
+    [SerializeField] private StringEvent _lineEvent;
+
+    [SerializeField] private ChoicesEvent _choicesEvent;
+
+    [SerializeField] private VoidEvent _advanceEvent;
+
+    [SerializeField] private IntEvent _makeChoiceEvent;
+
+    [SerializeField] private StringEvent _nodeStartedEvent;
+
     private int _textHash = -1;
 
     private Story _story;
 
-    private Story story
+    private Story Story
     {
         get
         {
             var hash = _inkTextAsset.text.GetHashCode();
-            if(_textHash != hash || _story == null)
+            if (_textHash != hash || _story == null)
             {
                 _textHash = hash;
                 _story = new Story(_inkTextAsset.text);
+                _mustSendChoices = false;
+                _story.onDidContinue += StoryOnDidContinue;
+                _advanceEvent.Register(AdvanceEventRaised);
+                _makeChoiceEvent.Register(MakeChoice);
             }
             return _story;
         }
+    }
+
+    private bool _mustSendChoices = false;
+
+    private void Awake()
+    {
+        _mustSendChoices = false;
+    }
+
+    private void StoryOnDidContinue()
+    {
+        if (Story.currentChoices.Count > 0)
+        {
+            if (_mustSendChoices)
+            {
+                _choicesEvent.Raise(new Choices()
+                {
+                    Lines = Story.currentChoices.Select(l => l.text).ToArray()
+                });
+                _mustSendChoices = false;
+            }
+            else
+            {
+                _lineEvent.Raise(Story.currentText);
+                _mustSendChoices = true;
+            }
+        }
+        else
+        {
+            _lineEvent.Raise(Story.currentText);
+        }
+    }
+
+    private void AdvanceEventRaised()
+    {
+        if (_mustSendChoices)
+        {
+            StoryOnDidContinue();
+        }
+        else
+        {
+            Story.Continue();
+        }
+    }
+
+    private void MakeChoice(int choiceNumber)
+    {
+        Story.ChooseChoiceIndex(choiceNumber);
     }
 
     public string GetNodeSuggestion(string nodeName) =>
@@ -43,7 +107,7 @@ public class StoryNodes : ScriptableObject
 
     private string GetLabelledTag(string nodeName, string label)
     {
-        var tags = story.TagsForContentAtPath(nodeName);
+        var tags = Story.TagsForContentAtPath(nodeName);
         var labelTags = tags
             .Select(tag => tag.Trim())
             .Where(tag => tag.StartsWith(label))
@@ -58,8 +122,8 @@ public class StoryNodes : ScriptableObject
 
     public void ChooseStory(string nodeName, ActionKind actionKind)
     {
-        story.ChoosePathString(nodeName);
-        story.Continue();
+        Story.ChoosePathString(nodeName);
+        Story.Continue();
         string tag;
         switch (actionKind)
         {
@@ -68,12 +132,14 @@ public class StoryNodes : ScriptableObject
             case ActionKind.Solve: tag = "solve"; break;
             default: throw new System.Exception("Unknown tag");
         }
-        foreach(var choice in story.currentChoices)
+        foreach (var choice in Story.currentChoices)
         {
-            if(choice.tags.Contains(tag))
+            if (choice.tags.Contains(tag))
             {
-                story.ChooseChoiceIndex(choice.index);
-                story.Continue();
+                Story.ChooseChoiceIndex(choice.index);
+                _mustSendChoices = false;
+                Story.Continue();
+                _nodeStartedEvent.Raise(nodeName);
                 return;
             }
         }
