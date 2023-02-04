@@ -18,7 +18,7 @@ public class StoryNodes : ScriptableObject
         get
         {
             var hash = _inkTextAsset.text.GetHashCode();
-            if(_textHash != hash)
+            if(_textHash != hash || _story == null)
             {
                 _textHash = hash;
                 _story = new Story(_inkTextAsset.text);
@@ -27,20 +27,24 @@ public class StoryNodes : ScriptableObject
         }
     }
 
-    public string GetNodeSuggestion(string nodeName)
-    {
-        const string suggestionLabel = "suggestion:";
-        var tags = story.TagsForContentAtPath(nodeName);
-        var suggestionTags = tags
-            .Select(tag => tag.Trim())
-            .Where(tag => tag.StartsWith(suggestionLabel))
-            .Select(tag => tag.Substring(suggestionLabel.Length).Trim())
-            .ToArray();
-        if(suggestionTags.Length != 1)
-        {
-            throw new System.Exception($"Expected 1 suggestion tag for node {nodeName}, found {suggestionTags.Length}");
-        }
-        return suggestionTags[0];
-    }
+    public string GetNodeSuggestion(string nodeName) =>
+        GetLabelledTag(nodeName, "suggestion:");
 
+    public string GetNodeDescription(string nodeName) =>
+        GetLabelledTag(nodeName, "description:");
+
+    private string GetLabelledTag(string nodeName, string label)
+    {
+        var tags = story.TagsForContentAtPath(nodeName);
+        var labelTags = tags
+            .Select(tag => tag.Trim())
+            .Where(tag => tag.StartsWith(label))
+            .Select(tag => tag.Substring(label.Length).Trim())
+            .ToArray();
+        if (labelTags.Length != 1)
+        {
+            throw new System.Exception($"Expected 1 '{label}' tag for node {nodeName}, found {labelTags.Length}");
+        }
+        return labelTags[0];
+    }
 }

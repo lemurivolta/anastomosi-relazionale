@@ -1,7 +1,8 @@
 -> DONE
 
 === Node1 ===
-# suggestion: Tempo per me
+# suggestion: CRIPTANSIOSA BOZZOLARIA
+# description: si manifesta con la tendenza delle radici a espandersi in profondità, sviluppando un bozzolo protettivo per evitare temporaneamente il contatto con altre piante
 
 * [solve #solve]
   -> Node1_solve
