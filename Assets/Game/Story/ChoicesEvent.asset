@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: ChoicesEvent
   m_EditorClassIdentifier: 
   _developerDescription: 
-  _replayBufferSize: 1
+  _replayBufferSize: 0
   _inspectorRaiseValue:
     Lines: []
