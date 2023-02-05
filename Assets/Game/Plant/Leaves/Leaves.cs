@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
+using DG.Tweening;
 
 public class Leaves : MonoBehaviour
 {
@@ -15,6 +14,8 @@ public class Leaves : MonoBehaviour
     [SerializeField] LeafVariants[] _leavesVariants;
 
     [SerializeField] Color[] _leavesColors;
+
+    [SerializeField] float _colorTweenDuration;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class Leaves : MonoBehaviour
 
         leafRenderer.sprite = leafVariant;
 
-        leafRenderer.color = _leavesColors[r.Next(0, _leavesColors.Length)];
+        leafRenderer.DOColor(_leavesColors[r.Next(0, _leavesColors.Length)], _colorTweenDuration);
     }
 
     private string _lastNodeNameSelected;
