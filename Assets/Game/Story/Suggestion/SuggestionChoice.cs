@@ -19,9 +19,12 @@ public class SuggestionChoice : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
     [SerializeField] private StoryNodes.ActionKind _actionKind;
 
+    [SerializeField] private StringEvent _nodeSelectedEvent;
+
     private void Start()
     {
         Assert.IsNotNull(_storyNodes);
+        Assert.IsNotNull(_nodeSelectedEvent);
         _tmPro = GetComponentInChildren<TextMeshProUGUI>();
         Assert.IsNotNull(_tmPro);
         _tmPro.color = _baseColor.Value;
@@ -40,11 +43,11 @@ public class SuggestionChoice : MonoBehaviour, IPointerEnterHandler, IPointerExi
     public void OnPointerClick(PointerEventData eventData)
     {
         _storyNodes.ChooseStory(_currentNode, _actionKind);
+        _nodeSelectedEvent.Raise("");
     }
 
     public void OnNodeSelected(string nodeName)
     {
-        Debug.Log("OnNodeSelected");
         _currentNode = nodeName;
     }
 }

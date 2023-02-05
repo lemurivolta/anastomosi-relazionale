@@ -29,6 +29,8 @@ public class StoryNodes : ScriptableObject
 
     [SerializeField] private StringEvent _nodeStartedEvent;
 
+    [SerializeField] private StringEvent _nodeEndedEvent;
+
     private int _textHash = -1;
 
     private Story _story;
@@ -88,9 +90,12 @@ public class StoryNodes : ScriptableObject
         {
             StoryOnDidContinue();
         }
-        else
+        else if(Story.canContinue)
         {
             Story.Continue();
+        } else
+        {
+            _nodeEndedEvent.Raise("");
         }
     }
 

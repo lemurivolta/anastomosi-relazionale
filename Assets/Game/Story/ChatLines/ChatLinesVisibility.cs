@@ -10,4 +10,9 @@ public class ChatLinesVisibility : MonoBehaviour
     {
         _chatLines.SetActive(true);
     }
+
+    public void NodeEnded()
+    {
+        _chatLines.SetActive(false);
+    }
 }

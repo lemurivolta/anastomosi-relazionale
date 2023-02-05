@@ -15,6 +15,8 @@ public class PlantSelectorSpriteMouseHover : MonoBehaviour
 
     [SerializeField] private string _nodeName;
 
+    public string NodeName => _nodeName;
+
     [SerializeField] private StringEvent _nodeHovered;
 
     [SerializeField] private StringEvent _nodeSelected;

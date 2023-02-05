@@ -11,7 +11,10 @@ public class SuggestionChoices : MonoBehaviour
         var active = !string.IsNullOrWhiteSpace(nodeName);
         foreach (var choice in _suggestionChoices)
         {
-            choice.SetActive(active);
+            if (choice)
+            {
+                choice.SetActive(active);
+            }
         }
     }
 }

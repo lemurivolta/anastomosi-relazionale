@@ -18,3 +18,4 @@ MonoBehaviour:
   _advanceEvent: {fileID: 11400000, guid: 39238e11f04c97d42a4c8e21a35f3111, type: 2}
   _makeChoiceEvent: {fileID: 11400000, guid: 091c256962e75034bb28c8f3d437917b, type: 2}
   _nodeStartedEvent: {fileID: 11400000, guid: 031f2c9815a3c3648ad8a668f1e55249, type: 2}
+  _nodeEndedEvent: {fileID: 11400000, guid: be6b69d8e40ac2b44bd0f5699a812923, type: 2}

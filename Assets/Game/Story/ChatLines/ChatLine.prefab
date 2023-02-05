@@ -262,6 +262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tmPro: {fileID: 3719266760754940990}
   _nameTmPro: {fileID: 3719266759368409386}
+  _avatar: {fileID: 3719266759854250033}
 --- !u!1 &3719266760754940988
 GameObject:
   m_ObjectHideFlags: 0

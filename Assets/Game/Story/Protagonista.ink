@@ -12,10 +12,9 @@
 === Protagonista1_solve ===
 Inizio di solve
 Arriva una scelta
-* prima voce
-* seconda voce
--
-Testo dopo la scelta
+Questa è una voce lunga, ma davvero lunga, ma lasciami dire che c'è davvero tanto testo da scrivere.
+Altra voce lunga, ma davvero lunga, ma lasciami dire che c'è davvero tanto testo da scrivere.
+Testo dopo la scelta che non c'è più
 -> DONE
 
 === Protagonista1_coagula ===

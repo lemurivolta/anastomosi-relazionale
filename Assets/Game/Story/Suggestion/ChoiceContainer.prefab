@@ -54,6 +54,7 @@ MonoBehaviour:
   _baseColor: {fileID: 11400000, guid: 9a431f1dff4b8af4d9f3eda9aa410f47, type: 2}
   _hoverColor: {fileID: 11400000, guid: a9aaef673f39c0f479893646f29ed59b, type: 2}
   _actionKind: 0
+  _nodeSelectedEvent: {fileID: 11400000, guid: 85a0374d818b6bb408d55db9d33ee086, type: 2}
 --- !u!1 &2195812133423549500
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,4 +10,9 @@ public class SuggestionVisibility : MonoBehaviour
     {
         _suggestion.SetActive(false);
     }
+
+    public void NodeEnded()
+    {
+        _suggestion.SetActive(true);
+    }
 }
