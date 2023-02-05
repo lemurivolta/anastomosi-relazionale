@@ -58,11 +58,15 @@ public class Flower : MonoBehaviour
             flowerRenderer.sprite = flowerVariant;
 
             var sequence = DOTween.Sequence();
-            for(var i = 0; i < _numPassageColors; i++)
+            float alphaDelta = 1f / (_numPassageColors - 1);
+            for (var i = 0; i < _numPassageColors; i++)
             {
                 var color = _flowersColors[r.Next(0, _flowersColors.Length)];
                 Debug.Log($"tweening color to {color}");
-                sequence.Append(flowerRenderer.DOColor(color, _timeBetweenPassageColors));
+                sequence.Append(flowerRenderer.DOColor(
+                    new Color(color.r, color.g, color.b, alphaDelta * i),
+                    _timeBetweenPassageColors
+                ));
             }
         }
     }
