@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SelectorsVisibility : MonoBehaviour
 {
+    [SerializeField] private Transform[] _selectors;
+
     public void OnNodeStarted()
     {
         SetAllActive(false);
@@ -16,10 +18,9 @@ public class SelectorsVisibility : MonoBehaviour
 
     private void SetAllActive(bool isActive)
     {
-        for(var i = 0; i < transform.childCount; i++)
+        foreach(var child in _selectors)
         {
-            var child = transform.GetChild(i);
-            if (child.TryGetComponent<DestroySelectorOnStart>(out _))
+            if (child != null && child.gameObject != null && child.TryGetComponent<DestroySelectorOnStart>(out _))
             {
                 child.gameObject.SetActive(isActive);
             }
