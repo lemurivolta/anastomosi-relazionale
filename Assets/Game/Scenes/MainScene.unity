@@ -862,10 +862,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.208901
-    y: 0.14980544
-    width: 0.58128977
-    height: 0.7003891
+    x: 0.06357857
+    y: 0.048494983
+    width: 0.87193465
+    height: 0.90301
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -1349,10 +1349,10 @@ Camera:
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.208901
-    y: 0.14980544
-    width: 0.58128977
-    height: 0.7003891
+    x: 0.06357857
+    y: 0.048494983
+    width: 0.87193465
+    height: 0.90301
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -2846,6 +2846,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 938e5b699558e7a4f9ca0af57250a374, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _selectors:
+  - {fileID: 1010685702}
+  - {fileID: 1041481255}
+  - {fileID: 761074767}
+  - {fileID: 222104316}
+  - {fileID: 1104079341}
+  - {fileID: 869008161}
+  - {fileID: 655247960}
+  - {fileID: 740037739}
+  - {fileID: 2018591802}
 --- !u!114 &949028341
 MonoBehaviour:
   m_ObjectHideFlags: 0

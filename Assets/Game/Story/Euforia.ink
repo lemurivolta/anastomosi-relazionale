@@ -1,6 +1,6 @@
 === Euforia1 ===
-# suggestion: CRIPTANSIOSA BOZZOLARIA
-# description: si manifesta con la tendenza delle radici a espandersi in profondità, sviluppando un bozzolo protettivo per evitare temporaneamente il contatto con altre piante
+# suggestion: CHINCHINELLA SCAVATRICE
+# description: quanto più le radici restano in superficie, tanto più scava per portarle in profondità
 
 * [solve #solve]
   -> Euforia1_solve
@@ -10,31 +10,32 @@
   -> Euforia1_amalgama
 
 === Euforia1_solve ===
-Allora ho provato a ignorare quella sensazione, a buttarmi nella folla.
-Ero un pesce rosso che vi guardava dalla mia boccia di vetro, con un muro trasparente tutt’intorno. 
-È chiaro che i pesci rossi non sono bravi a socializzare.
+La prima volta che conobbi Euforia mi accorsi che non avevamo molto in comune. Quasi niente.
+In realtà all’inizio era affascinante.
+“È come disegnare una mappa di un territorio sconosciuto”, avevo detto a Euforia.
+“Ah… ed è così necessaria questa mappa?”
 -> DONE
 
 === Euforia1_coagula ===
-Non ho fatto nulla di importante o di “significativo”.
-Ho letto quel vecchio fumetto rimasto sul letto.
-Ho pensato di avercela fatta, a congelare il tempo.
-Invece era arrivata sera, senza che me ne accorgessi.
-Il telefono aveva squillato non so quante volte. 
+Discutevo sempre più spesso di questioni profonde.
+Non mi interessava davvero parlarne, volevo solo forzare Euforia a discuterne.
+Era una sfida.
+Ogni volta, le sbilanciava e le alleggeriva fino a farmi dubitare fossero mai state così importanti.
 -> DONE
 
 === Euforia1_amalgama ===
-Una volta ti ho parlato del fatto che volte è così, che ho bisogno di silenzio o di mettermi qualcosa in cuffia e immaginare mondi per conto mio. 
-“A te non succede mai?”.
-Mi hai detto di no, ma che andava bene così, di non preoccuparmi.
+Quando presentai Hedera a Euforia temevo non si piacessero.
+Invece Euforia fece una delle sue battute: Hedera rise e rispose con un’altra a tono. Euforia ne fece un’altra ancora.
+Finì a scherzare su quanto il lavoro in ospedale stesse minando la sua empatia.
+Non me ne aveva mai parlato.
 -> DONE
 
 
 
 
 === Euforia2 ===
-# suggestion: COCCINIGLIA STEREOTIPARIA
-# description: questo parassita trasmette un senso di inadeguatezza alle radici, che smettono di proliferare e crescere
+# suggestion: RANNICCHIATA CANGIANTE
+# description: Si manifesta quando una delle due radici cresce in modo particolarmente rigoglioso e l’altra non crede di esserne all’altezza e cerca di trasformarsi di conseguenza
 
 * [solve #solve]
   -> Euforia2_solve
@@ -44,22 +45,27 @@ Mi hai detto di no, ma che andava bene così, di non preoccuparmi.
   -> Euforia2_amalgama
 
 === Euforia2_solve ===
-testo di solve
+Pensavo di sfigurare accanto Euforia e in breve mi buttai via.
+Setacciai tutto il quartiere per ritrovarmi. Mi mancavo. Chiesi una mano, mi chiedevano come fossi fatto o dove mi fossi perso e non sapevo bene che dire.
+Mi ritrovai e decisi di avere più cura di me.
 -> DONE
 
 === Euforia2_coagula ===
-testo di coagula
+Sparii per qualche tempo, in preda al panico.
+Mi immaginavo Euforia parlare di striscio di me a persone più in gamba di me, dimenticarmi, raccontarmi come un aneddoto buffo.
+Era una versione di Euforia creata a sua insaputa che vedevo in qualche angolo buio.
 -> DONE
 
 === Euforia2_amalgama ===
-testo di amalgama
+All’inizio cambiai piccole cose di me. Erano miglioramenti, limature, cose che avrebbero fatto bene a me per primo.
+Poi qualche colore. Poi qualcosa nella forma. La voce. Le mani. I capelli. Il tronco. I rami. I denti. I ricordi. E poi ancora…
 -> DONE
 
 
 
 === Euforia3 ===
-# suggestion: COCCINIGLIA STEREOTIPARIA
-# description: questo parassita trasmette un senso di inadeguatezza alle radici, che smettono di proliferare e crescere
+# suggestion: TARTUFO SPIRAMORFO
+# description: tende a originarsi quando le radici vengono avviluppate da un senso di ripetitività e noia
 
 * [solve #solve]
   -> Euforia3_solve
@@ -69,13 +75,18 @@ testo di amalgama
   -> Euforia3_amalgama
 
 === Euforia3_solve ===
-testo di solve
+Che le cose non devono essere per sempre, me l’aveva detto proprio Euforia, con una serenità che mi aveva spaventato.
+Quella sera decisi che avrei tenuto in tasca un nome, una frase che mi aveva detto, una sua foto, quell’anello che portava.
 -> DONE
 
 === Euforia3_coagula ===
-testo di coagula
+Quel modo con cui Euforia mi chiamava sempre aveva uno strano suono. Come quando ripeti una parola troppo spesso, era diventato un grumo di parole.
+Smisi di cercarne un significato.
+Ci ostinavamo a parlare solo per agglomerati di suoni, rumore bianco e interferenze.
 -> DONE
 
 === Euforia3_amalgama ===
-testo di amalgama
+Tempo dopo, ci ritrovammo e parlammo di tutto quel periodo: dei flirt, delle fantasie sussurrate alle due di notte, delle allusioni e delle battute.
+“Ci siamo usati a vicenda”.
+Non ne parlava come di qualcosa di brutto.
 -> DONE

@@ -11,7 +11,6 @@ public class CreateChatLines : MonoBehaviour
 
     public void OnNodeEnded()
     {
-        Debug.Log("Cleaning up chat lines");
         var t = _linesContainer.transform;
         for (var i = 0; i < t.childCount; i++)
         {
@@ -37,10 +36,14 @@ public class CreateChatLines : MonoBehaviour
         rt.anchoredPosition -= new Vector2(0, h);
 
         h += chatLineManager.TotalHeight;
+        var lrt = _linesContainer.GetComponent<RectTransform>();
         if (h > _maxLinesHeight)
         {
-            var lrt = _linesContainer.GetComponent<RectTransform>();
             lrt.offsetMax = new Vector2(lrt.offsetMax.x, h - _maxLinesHeight);
+        }
+        else
+        {
+            lrt.offsetMax = new Vector2(lrt.offsetMax.x, 0);
         }
     }
 }
