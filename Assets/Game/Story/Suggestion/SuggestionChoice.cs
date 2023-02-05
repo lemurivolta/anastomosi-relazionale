@@ -44,6 +44,7 @@ public class SuggestionChoice : MonoBehaviour, IPointerEnterHandler, IPointerExi
     {
         _storyNodes.ChooseStory(_currentNode, _actionKind);
         _nodeSelectedEvent.Raise("");
+        _tmPro.color = _baseColor.Value;
     }
 
     public void OnNodeSelected(string nodeName)

@@ -33,9 +33,13 @@ public class StoryNodes : ScriptableObject
 
     [SerializeField] private IntEvent _nodeActionEvent;
 
+    [SerializeField] private VoidEvent _allNodesExploredEvent;
+
     private int _textHash = -1;
 
     private Story _story;
+
+    private List<string> _nodesYetToVisit;
 
     private Story Story
     {
@@ -50,6 +54,21 @@ public class StoryNodes : ScriptableObject
                 _story.onDidContinue += StoryOnDidContinue;
                 _advanceEvent.Register(AdvanceEventRaised);
                 _makeChoiceEvent.Register(MakeChoice);
+
+                _nodesYetToVisit = new();
+                var namedContent = _story.mainContentContainer.namedContent.Keys;
+                foreach (var content in namedContent)
+                {
+                    try
+                    {
+                        GetNodeSuggestion(content);
+                        _nodesYetToVisit.Add(content);
+                    }
+                    catch
+                    {
+                        // throws exception if there's no suggestion tag
+                    }
+                }
             }
             return _story;
         }
@@ -86,18 +105,27 @@ public class StoryNodes : ScriptableObject
         }
     }
 
+    private string _currentNode = "";
+
     private void AdvanceEventRaised()
     {
         if (_mustSendChoices)
         {
             StoryOnDidContinue();
         }
-        else if(Story.canContinue)
+        else if (Story.canContinue)
         {
             Story.Continue();
-        } else
+        }
+        else
         {
-            _nodeEndedEvent.Raise("");
+            _nodeEndedEvent.Raise(_currentNode);
+            _nodesYetToVisit.Remove(_currentNode);
+            _currentNode = "";
+            if (_nodesYetToVisit.Count == 0)
+            {
+                _allNodesExploredEvent.Raise();
+            }
         }
     }
 
@@ -129,6 +157,7 @@ public class StoryNodes : ScriptableObject
 
     public void ChooseStory(string nodeName, ActionKind actionKind)
     {
+        _currentNode = nodeName;
         Story.ChoosePathString(nodeName);
         Story.Continue();
         string tag = actionKind switch
