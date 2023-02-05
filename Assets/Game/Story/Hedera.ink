@@ -1,6 +1,6 @@
 === Hedera1 ===
-# suggestion: CRIPTANSIOSA BOZZOLARIA
-# description: si manifesta con la tendenza delle radici a espandersi in profondità, sviluppando un bozzolo protettivo per evitare temporaneamente il contatto con altre piante
+# suggestion: STELLARIA ALLORIFERITA
+# description: la sua presenza agevola tra le radici un flusso incontrollato di linfa, pensieri e immaginazione
 
 * [solve #solve]
   -> Hedera1_solve
@@ -10,31 +10,28 @@
   -> Hedera1_amalgama
 
 === Hedera1_solve ===
-Allora ho provato a ignorare quella sensazione, a buttarmi nella folla.
-Ero un pesce rosso che vi guardava dalla mia boccia di vetro, con un muro trasparente tutt’intorno. 
-È chiaro che i pesci rossi non sono bravi a socializzare.
+I miei segreti, le mie paure… iniziò a farmi un po’ paura che Hedera avesse il dono di entrare così in profondità dentro di me.
+E se avessimo litigato? E se avesse usato tutto questo come un’arma? Se l’avesse raccontato ad altre persone?
+Mi spaventai e per un po’ certe cose le tenni solo per me.
 -> DONE
 
 === Hedera1_coagula ===
-Non ho fatto nulla di importante o di “significativo”.
-Ho letto quel vecchio fumetto rimasto sul letto.
-Ho pensato di avercela fatta, a congelare il tempo.
-Invece era arrivata sera, senza che me ne accorgessi.
-Il telefono aveva squillato non so quante volte. 
+Fu Hedera a insegnarmi a ballare. Non mi era mai piaciuto prima che me ne parlasse. Disse che nel suo paese i passi di danza sono colori e le pause una punteggiatura.
+Alla fine si ottiene un quadro che è una poesia che è una danza che è un canto.
+E io non avevo mai visto nulla di tutto ciò.
 -> DONE
 
 === Hedera1_amalgama ===
-Una volta ti ho parlato del fatto che volte è così, che ho bisogno di silenzio o di mettermi qualcosa in cuffia e immaginare mondi per conto mio. 
-“A te non succede mai?”.
-Mi hai detto di no, ma che andava bene così, di non preoccuparmi.
+Parlammo di un film davvero brutto, al nostro primo incontro, che credevo di conoscere solo io.
+Via via ci ritrovammo a parlare del cinema in cui l’avevamo visto, l’odore delle poltrone, il profumo dei popcorn e io sono tuttora convinto che fossimo seduti a fianco senza saperlo.
 -> DONE
 
 
 
 
 === Hedera2 ===
-# suggestion: COCCINIGLIA STEREOTIPARIA
-# description: questo parassita trasmette un senso di inadeguatezza alle radici, che smettono di proliferare e crescere
+# suggestion: OTELLA VENEFICA
+# description: si sviluppa nei sistemi in cui più piante sono in simbiosi. L’Otella avvelena le radici di una di loro
 
 * [solve #solve]
   -> Hedera2_solve
@@ -44,22 +41,25 @@ Mi hai detto di no, ma che andava bene così, di non preoccuparmi.
   -> Hedera2_amalgama
 
 === Hedera2_solve ===
-testo di solve
+Alla fine mi esasperai. Dissi quello che ci eravamo detti un sacco di volte: che le persone non sono una proprietà privata, che i sentimenti non sono qualcosa che hai dato a qualcuno poi li hai finiti e ciao.
+Hedera continuava a dire di avere paura.
 -> DONE
 
 === Hedera2_coagula ===
-testo di coagula
+Finì per vedere meno Euforia, pur di non far soffrire così Hedera.
+Però ogni tanto mi veniva a pensare che a nessuno importava quanto stesse male Euforia. O io. Tutti stavamo proteggendo Hedera, che non avevo mai trovato così irritante e insopportabile.
 -> DONE
 
 === Hedera2_amalgama ===
-testo di amalgama
+Eppure c’erano cose che potevi fare solo con Hedera. In quelle cose era insostituibile: pensare a rapinare un treno, a far volare un dirigibile e immaginare storie pulp di fenicotteri erano cose per cui potevi contare solo su Hedera.
+Così, glielo dissi.
 -> DONE
 
 
 
 === Hedera3 ===
-# suggestion: COCCINIGLIA STEREOTIPARIA
-# description: questo parassita trasmette un senso di inadeguatezza alle radici, che smettono di proliferare e crescere
+# suggestion: SUBEROSI EQUIDISTANTE
+# description: provoca delle placche e un degrado delle radici che diventa tanto più forte quanto più le due radici sono intrecciate
 
 * [solve #solve]
   -> Hedera3_solve
@@ -69,13 +69,16 @@ testo di amalgama
   -> Hedera3_amalgama
 
 === Hedera3_solve ===
-testo di solve
+E insomma, la prima cosa che feci fu un respiro profondo. Avrei pensato dopo a quello che non c’era più, agli rpg giapponesi che giocavamo insieme, agli esperimenti di magia, a quel libro per bambini sull’anarchia.
+Per il momento, chiusi gli occhi.
 -> DONE
 
 === Hedera3_coagula ===
-testo di coagula
+Ci scambiammo paure come ci eravamo scambiati quelle strambe playlist di vecchi gruppi new wave. Le mettemmo a confronto, le buttammo su un tavolo, ne facevamo seccare alcune e ne vedevamo crescere nuove.
+Arrivammo a mattina e decidemmo di parlare ancora per un po’.
 -> DONE
 
 === Hedera3_amalgama ===
-testo di amalgama
+Ci allontanammo. Parlavamo da città diverse, a giorni alterni.
+Eravamo come quelle comunicazioni che mandi ad Alpha Centauri e dopo secoli arriva un ping di risposta. Eppure, dopo tanto tempo, ricominciai ad aspettare con ansia quel segnale spaziale.
 -> DONE
