@@ -10,19 +10,23 @@
   -> Protagonista1_amalgama
 
 === Protagonista1_solve ===
-Inizio di solve
-Arriva una scelta
-Questa è una voce lunga, ma davvero lunga, ma lasciami dire che c'è davvero tanto testo da scrivere.
-Altra voce lunga, ma davvero lunga, ma lasciami dire che c'è davvero tanto testo da scrivere.
-Testo dopo la scelta che non c'è più
+Allora ho provato a ignorare quella sensazione, a buttarmi nella folla.
+Ero un pesce rosso che vi guardava dalla mia boccia di vetro, con un muro trasparente tutt’intorno. 
+È chiaro che i pesci rossi non sono bravi a socializzare.
 -> DONE
 
 === Protagonista1_coagula ===
-testo di coagula
+Non ho fatto nulla di importante o di “significativo”.
+Ho letto quel vecchio fumetto rimasto sul letto.
+Ho pensato di avercela fatta, a congelare il tempo.
+Invece era arrivata sera, senza che me ne accorgessi.
+Il telefono aveva squillato non so quante volte. 
 -> DONE
 
 === Protagonista1_amalgama ===
-testo di amalgama
+Una volta ti ho parlato del fatto che volte è così, che ho bisogno di silenzio o di mettermi qualcosa in cuffia e immaginare mondi per conto mio. 
+“A te non succede mai?”.
+Mi hai detto di no, ma che andava bene così, di non preoccuparmi.
 -> DONE
 
 

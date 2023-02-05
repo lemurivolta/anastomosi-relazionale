@@ -31,6 +31,8 @@ public class StoryNodes : ScriptableObject
 
     [SerializeField] private StringEvent _nodeEndedEvent;
 
+    [SerializeField] private IntEvent _nodeActionEvent;
+
     private int _textHash = -1;
 
     private Story _story;
@@ -129,14 +131,14 @@ public class StoryNodes : ScriptableObject
     {
         Story.ChoosePathString(nodeName);
         Story.Continue();
-        string tag;
-        switch (actionKind)
+        string tag = actionKind switch
         {
-            case ActionKind.Coagula: tag = "coagula"; break;
-            case ActionKind.Amalgama: tag = "amalgama"; break;
-            case ActionKind.Solve: tag = "solve"; break;
-            default: throw new System.Exception("Unknown tag");
-        }
+            ActionKind.Coagula => "coagula",
+            ActionKind.Amalgama => "amalgama",
+            ActionKind.Solve => "solve",
+            _ => throw new System.Exception("Unknown tag"),
+        };
+        _nodeActionEvent.Raise((int)actionKind);
         foreach (var choice in Story.currentChoices)
         {
             if (choice.tags.Contains(tag))

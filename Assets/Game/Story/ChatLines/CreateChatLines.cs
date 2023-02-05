@@ -9,6 +9,16 @@ public class CreateChatLines : MonoBehaviour
     [SerializeField] private float _padding;
     [SerializeField] private float _maxLinesHeight;
 
+    public void OnNodeEnded()
+    {
+        Debug.Log("Cleaning up chat lines");
+        var t = _linesContainer.transform;
+        for (var i = 0; i < t.childCount; i++)
+        {
+            Destroy(t.GetChild(i).gameObject);
+        }
+    }
+
     public void OnChatLine(string line)
     {
         Debug.Log(line);
