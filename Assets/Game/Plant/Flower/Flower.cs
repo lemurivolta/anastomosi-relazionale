@@ -1,4 +1,4 @@
-using System.Collections;
+using DG.Tweening;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -31,6 +31,9 @@ public class Flower : MonoBehaviour
         _lastNodeAction = index;
     }
 
+    [SerializeField] private int _numPassageColors;
+    [SerializeField] private float _timeBetweenPassageColors;
+
     public void OnAllNodesExplored()
     {
         // compute seed from all choices
@@ -54,7 +57,13 @@ public class Flower : MonoBehaviour
 
             flowerRenderer.sprite = flowerVariant;
 
-            flowerRenderer.color = _flowersColors[r.Next(0, _flowersColors.Length)];
+            var sequence = DOTween.Sequence();
+            for(var i = 0; i < _numPassageColors; i++)
+            {
+                var color = _flowersColors[r.Next(0, _flowersColors.Length)];
+                Debug.Log($"tweening color to {color}");
+                sequence.Append(flowerRenderer.DOColor(color, _timeBetweenPassageColors));
+            }
         }
     }
 }
